@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="bg-[#0b0b0b] text-white">
+<body id="body" class="bg-[#0b0b0b] text-white transition-colors duration-300">
 
   <!-- NAVBAR -->
   <header class="sticky top-0 z-50 bg-[#0b0b0b]/80 backdrop-blur border-b border-white/5">
@@ -39,10 +39,10 @@
       </ul>
 
       <div class="flex items-center gap-3">
-        <button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
-          ☼
-        </button>
-        <script src="index.js"></script>
+        <button id="themeBtn" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
+  ☼
+</button>
+
 
         <a href="#contact" class="px-5 py-2 rounded-xl bg-white text-black font-semibold hover:opacity-90 transition">
           Let's Talk
@@ -376,6 +376,49 @@
       </p>
     </div>
   </footer>
+  
+  <script>
+  const themeBtn = document.getElementById("themeBtn");
+  const body = document.getElementById("body");
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "light") {
+    enableLightMode();
+  } else {
+    enableDarkMode();
+  }
+
+  themeBtn.addEventListener("click", () => {
+    if (body.classList.contains("light")) {
+      enableDarkMode();
+      localStorage.setItem("theme", "dark");
+    } else {
+      enableLightMode();
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  function enableLightMode() {
+    body.classList.add("light");
+    body.classList.remove("dark");
+
+    body.style.backgroundColor = "#ffffff";
+    body.style.color = "#000000";
+
+    themeBtn.innerHTML = "🌙";
+  }
+
+  function enableDarkMode() {
+    body.classList.add("dark");
+    body.classList.remove("light");
+
+    body.style.backgroundColor = "#0b0b0b";
+    body.style.color = "#ffffff";
+
+    themeBtn.innerHTML = "☼";
+  }
+</script>
+
 
 </body>
 </html>
