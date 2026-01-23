@@ -59,12 +59,12 @@
       color: rgba(0, 0, 0, 0.65) !important;
     }
 
-    /* ✅ Light mode me cards background fix */
+    /* ✅ Light mode me cards background  */
     body.light .bg-white\/5 {
       background: rgba(0, 0, 0, 0.04) !important;
     }
 
-    /* ✅ Light mode me border fix */
+    /* ✅ Light mode me border  */
     body.light .border-white\/10,
     body.light .border-white\/15,
     body.light .border-white\/5 {
@@ -92,6 +92,16 @@
     body {
       transition: background 0.3s, color 0.3s;
     }
+    /* ✅ Light mode me text-white ko dark karo */
+body.light .text-white{
+  color: #111 !important;
+}
+
+/* ✅ Light mode me Download Resume button visible */
+body.light a.border{
+  color: #111 !important;
+}
+
   </style>
 
 </head>
@@ -190,11 +200,17 @@
 
           <!-- photo -->
           <div class="absolute inset-8 rounded-full overflow-hidden bg-white/10 border border-white/10">
-            <img
+            <!-- <img
               src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop"
               class="w-full h-full object-cover"
               alt="Vaishvi Photo"
-            />
+            /> -->
+            <div class="absolute inset-8 rounded-full overflow-hidden bg-white/10 border border-white/10">
+  <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-500 via-emerald-400 to-teal-400">
+    <h1 class="text-7xl md:text-8xl font-extrabold text-white tracking-wider">VA</h1>
+  </div>
+</div>
+
           </div>
 
           <!-- stats -->
@@ -351,7 +367,7 @@
     <div class="text-center">
       <p class="text-orange-500 tracking-widest text-sm font-semibold mb-3">GET IN TOUCH</p>
       <h2 class="text-4xl md:text-6xl font-extrabold">
-        Let’s Work <span class="serif italic">Together</span>
+        Let's Work <span class="serif italic">Together</span>
       </h2>
       <p class="mt-4 text-white/55 max-w-2xl mx-auto">
         Want to connect with me? Feel free to send a message!
@@ -398,7 +414,7 @@
             <p class="font-semibold">Available for Learning</p>
           </div>
           <p class="text-white/55 mt-3">
-            I’m actively learning and building projects. Open to internships and collaborations.
+            I'm actively learning and building projects. Open to internships and collaborations.
           </p>
         </div>
       </div>
