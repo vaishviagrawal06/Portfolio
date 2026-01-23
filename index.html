@@ -13,49 +13,86 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
-  <style>
-   <style>
-  body{ font-family: "Inter", sans-serif; }
-  .serif{ font-family: "Playfair Display", serif; }
-
-  /* ✅ Dark Theme */
-  body.dark{
-    background: #0b0b0b;
-    color: white;
-  }
-
-  /* ✅ Light Theme */
-  body.light{
-    background: #ffffff;
-    color: #111111;
-  }
-
-  /* ✅ Light mode me inside content visible rahe */
-  body.light .text-white\/60,
-  body.light .text-white\/55,
-  body.light .text-white\/50,
-  body.light .text-white\/45,
-  body.light .text-white\/70{
-    color: rgba(0,0,0,0.65) !important;
-  }
-
-  body.light .bg-white\/5{
-    background: rgba(0,0,0,0.05) !important;
-  }
-
-  body.light .border-white\/10,
-  body.light .border-white\/15,
-  body.light .border-white\/5{
-    border-color: rgba(0,0,0,0.12) !important;
-  }
-
-  body.light .bg-black\/30{
-    background: rgba(0,0,0,0.06) !important;
-  }
-</style>
-
-  </style>
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: "Inter", sans-serif; }
+    .serif { font-family: "Playfair Display", serif; }
+
+    /* ✅ Dark Theme */
+    body.dark {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* ✅ Light Theme */
+    body.light {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    /* ✅ Navbar + sections background change */
+    body.light header {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+
+    body.light header h1 {
+      color: #111111 !important;
+    }
+
+    body.light header ul {
+      color: rgba(0, 0, 0, 0.65) !important;
+    }
+
+    body.light header a:hover {
+      color: #000000 !important;
+    }
+
+    /* ✅ Light mode me text-white/* classes visible */
+    body.light .text-white\/60,
+    body.light .text-white\/55,
+    body.light .text-white\/50,
+    body.light .text-white\/45,
+    body.light .text-white\/70 {
+      color: rgba(0, 0, 0, 0.65) !important;
+    }
+
+    /* ✅ Light mode me cards background fix */
+    body.light .bg-white\/5 {
+      background: rgba(0, 0, 0, 0.04) !important;
+    }
+
+    /* ✅ Light mode me border fix */
+    body.light .border-white\/10,
+    body.light .border-white\/15,
+    body.light .border-white\/5 {
+      border-color: rgba(0, 0, 0, 0.12) !important;
+    }
+
+    /* ✅ Light mode me inputs background fix */
+    body.light .bg-black\/30 {
+      background: rgba(0, 0, 0, 0.06) !important;
+      color: #111111 !important;
+    }
+
+    /* ✅ Light mode input placeholder color */
+    body.light input::placeholder,
+    body.light textarea::placeholder {
+      color: rgba(0, 0, 0, 0.45) !important;
+    }
+
+    /* ✅ Light mode ke liye badge text */
+    body.light span.bg-white\/5 {
+      color: #111 !important;
+    }
+
+    /* ✅ Smooth transition */
+    body {
+      transition: background 0.3s, color 0.3s;
+    }
+  </style>
 
 </head>
 
@@ -77,10 +114,10 @@
       </ul>
 
       <div class="flex items-center gap-3">
-        <button id="themeBtn" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
-  ☼
-</button>
-
+        <button id="themeBtn"
+          class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
+          ☼
+        </button>
 
         <a href="#contact" class="px-5 py-2 rounded-xl bg-white text-black font-semibold hover:opacity-90 transition">
           Let's Talk
@@ -129,20 +166,20 @@
         </div>
 
         <div class="mt-10 flex gap-4">
-  
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/vaishvi-agrawal-792407331/" target="_blank"
-    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-white/5 transition hover:scale-110 duration-200">
-    <i class="fa-brands fa-linkedin-in text-xl"></i>
-  </a>
 
-  <!-- GitHub -->
-  <a href="https://github.com/vaishviagrawal06" target="_blank"
-    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-white/5 transition hover:scale-110 duration-200">
-    <i class="fa-brands fa-github text-xl"></i>
-  </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/vaishvi-agrawal-792407331/" target="_blank"
+            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-white/5 transition hover:scale-110 duration-200">
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+          </a>
 
-</div>
+          <!-- GitHub -->
+          <a href="https://github.com/vaishviagrawal06" target="_blank"
+            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-white/5 transition hover:scale-110 duration-200">
+            <i class="fa-brands fa-github text-xl"></i>
+          </a>
+
+        </div>
 
       </div>
 
@@ -151,7 +188,7 @@
         <div class="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full border border-orange-500/30">
           <div class="absolute inset-4 rounded-full border border-orange-500/40 border-dashed"></div>
 
-          <!-- ✅ photo -->
+          <!-- photo -->
           <div class="absolute inset-8 rounded-full overflow-hidden bg-white/10 border border-white/10">
             <img
               src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop"
@@ -302,7 +339,7 @@
       <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10">C++</span>
       <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10">Java</span>
       <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10">Bootstrap</span>
-       <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10">SQL</span>
+      <span class="px-6 py-3 rounded-full bg-white/5 border border-white/10">SQL</span>
       <span class="px-6 py-3 rounded-full bg-orange-500/10 border border-orange-500/40 text-orange-300">
         Tailwind CSS
       </span>
@@ -314,7 +351,7 @@
     <div class="text-center">
       <p class="text-orange-500 tracking-widest text-sm font-semibold mb-3">GET IN TOUCH</p>
       <h2 class="text-4xl md:text-6xl font-extrabold">
-        Let's Work <span class="serif italic">Together</span>
+        Let’s Work <span class="serif italic">Together</span>
       </h2>
       <p class="mt-4 text-white/55 max-w-2xl mx-auto">
         Want to connect with me? Feel free to send a message!
@@ -361,7 +398,7 @@
             <p class="font-semibold">Available for Learning</p>
           </div>
           <p class="text-white/55 mt-3">
-            I'm actively learning and building projects. Open to internships and collaborations.
+            I’m actively learning and building projects. Open to internships and collaborations.
           </p>
         </div>
       </div>
@@ -415,32 +452,32 @@
     </div>
   </footer>
 
- <script>
-  const themeBtn = document.getElementById("themeBtn");
-  const body = document.getElementById("body");
+  <!-- ✅ Theme Toggle Script -->
+  <script>
+    const themeBtn = document.getElementById("themeBtn");
+    const body = document.getElementById("body");
 
-  // ✅ Load theme
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  body.classList.add(savedTheme);
+    // ✅ Load theme
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    body.classList.remove("dark", "light");
+    body.classList.add(savedTheme);
 
-  themeBtn.innerHTML = savedTheme === "light" ? "🌙" : "☼";
+    themeBtn.innerHTML = savedTheme === "light" ? "🌙" : "☼";
 
-  themeBtn.addEventListener("click", () => {
-    if (body.classList.contains("light")) {
-      body.classList.remove("light");
-      body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      themeBtn.innerHTML = "☼";
-    } else {
-      body.classList.remove("dark");
-      body.classList.add("light");
-      localStorage.setItem("theme", "light");
-      themeBtn.innerHTML = "🌙";
-    }
-  });
-</script>
-
-
+    themeBtn.addEventListener("click", () => {
+      if (body.classList.contains("light")) {
+        body.classList.remove("light");
+        body.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        themeBtn.innerHTML = "☼";
+      } else {
+        body.classList.remove("dark");
+        body.classList.add("light");
+        localStorage.setItem("theme", "light");
+        themeBtn.innerHTML = "🌙";
+      }
+    });
+  </script>
 
 </body>
 </html>
